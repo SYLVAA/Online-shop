@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+
+
+*:before,
+*:after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    overflow-x: hidden;
+    color: #000;
+
+}
+
+a{
+    display:inline-block;
+    text-decoration: none;
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Josefin Sans', sans-serif;
+   
+}
+
+
+.navbar a {
+  color:#000; 
+  padding: 10px; 
+  text-decoration: none; 
+  transition: color 0.5s; 
+}
+
+
+.nav-item{
+    padding: 10px;
+}
+
+
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0 
+}
+
+
+.toggler-icon{
+    width: 32px;
+    height: 2px;
+    display: block;
+    transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+    margin: 7px;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+    transform: translateY(9px) rotate(42deg);
+  
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-42deg);
+    
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+  
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #000;
+}
+
+
+.hero{
+    width: 100%;
+    height: auto;
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% center;
+
+}
+.hero .container{
+    padding: 200px 0px;
+    position: relative;
+}
+.hero .desc{
+    width: 550px;
+    max-width: 100%;
+
+}
+
+.hero .connect{
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+.hero .connect .social{
+    display: flex;
+    gap: 12px;
+    position: relative;
+
+}
+
+.hero .connect .social::before{
+    content: "";
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+}
+
+.hero .connect .social a{
+    font-size: 24px;
+    color: #000;
+    transition: .3s color;
+}
+.hero .connect .social a i{
+    vertical-align: middle;
+
+}
+
+
+.featured{
+    padding: 18px 18px 0px;
+}
+.featured .content{
+    width: 100%;
+    display: grid;
+    gap: 20px;
+}
+.featured .product{
+    background-color: #f0f0f0;
+    padding: 32px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (min-width:750px) {
+    .featured .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .featured .product:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+}
+@media screen and (min-width:990px) {
+    .featured .content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .featured .product:nth-child(3) {
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    
+}
+.featured .product .desc{
+    padding: 24px 0;
+}
+
+.featured .product .desc h3{
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.featured .product .desc p{
+    font-size: 18px;
+
+}
+.featured .product .desc .btn-line{
+    margin-top: 40px;
+    position: relative;
+    color: #000;
+}
+
+.featured .product .desc .btn-line:after{
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    transition: .3s width;
+
+}
+.featured .product .desc .btn-line:hover:after {
+width: 70px;
+}
+.featured .product .place {
+    width: 50%;
+    transition: 0.3s transform;
+}
+
+.featured .product:hover .place {
+    transform: scale(1.2);
+}
+
+
+.heading{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.heading .title{
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.product{
+    
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.cardd{
+    width: 200px;
+    height: 400px;
+    max-height: 100%;
+    border:#000 solid;
+    padding: 21px;
+}
